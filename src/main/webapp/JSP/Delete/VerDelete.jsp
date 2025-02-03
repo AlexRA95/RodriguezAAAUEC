@@ -23,10 +23,9 @@
                 <table class="table table-striped table-hover table-bordered">
                     <thead class="table-dark">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">1º Apellido</th>
-                        <th scope="col">2º Apellido</th>
+                        <th scope="col">Nombre y Apellidos</th>
+                        <th scope="col">Escala</th>
+                        <th scope="col">Fecha</th>
                         <th scope="col">Seleccionar</th>
                     </tr>
                     </thead>
@@ -34,16 +33,15 @@
                     <c:choose>
                         <c:when test="${empty requestScope.profesores}">
                             <tr>
-                                <td colspan="5" class="text-center">No hay profesores registrados todavía</td>
+                                <td colspan="4" class="text-center">No hay profesores registrados todavía</td>
                             </tr>
                         </c:when>
                         <c:otherwise>
                             <c:forEach items="${requestScope.profesores}" var="profesor" varStatus="status">
                                 <tr>
-                                    <td>${profesor.id}</td>
-                                    <td>${profesor.nombre}</td>
-                                    <td>${profesor.ape1}</td>
-                                    <td>${profesor.ape2}</td>
+                                    <td>${profesor.nombre} ${profesor.ape1} ${profesor.ape2}</td>
+                                    <td>${profesor.escala}</td>
+                                    <td>${profesor.fechaFormateada}</td>
                                     <td><input class="form-check-input" type="radio" name="profDelete" value="${profesor.id}" ${status.first ? 'checked' : ''}> </td>
                                 </tr>
                             </c:forEach>

@@ -23,26 +23,24 @@
                 <table class="table table-striped table-hover table-bordered">
                     <thead class="table-dark">
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">1º Apellido</th>
-                        <th scope="col">2º Apellido</th>
+                        <th scope="col">Nombre y Apellidos</th>
+                        <th scope="col">Escala</th>
+                        <th scope="col">Fecha</th>
                     </tr>
                     </thead>
                     <tbody>
                     <c:choose>
                         <c:when test="${empty requestScope.profesores}">
                             <tr>
-                                <td colspan="4" class="text-center">No hay profesores registrados todavía</td>
+                                <td colspan="3" class="text-center">No hay profesores registrados todavía</td>
                             </tr>
                         </c:when>
                         <c:otherwise>
                             <c:forEach items="${requestScope.profesores}" var="profesor">
                                 <tr>
-                                    <td>${profesor.id}</td>
-                                    <td>${profesor.nombre}</td>
-                                    <td>${profesor.ape1}</td>
-                                    <td>${profesor.ape2}</td>
+                                    <td>${profesor.nombre} ${profesor.ape1} ${profesor.ape2}</td>
+                                    <td>${profesor.escala}</td>
+                                    <td>${profesor.fechaFormateada}</td>
                                 </tr>
                             </c:forEach>
                         </c:otherwise>

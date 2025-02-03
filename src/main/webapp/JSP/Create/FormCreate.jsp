@@ -27,6 +27,14 @@
                 </c:if>
                 <form method="post" action="${applicationScope.contexto}/Create">
                     <div class="mb-3">
+                        <label for="id" class="form-label">Id *</label>
+                        <input type="text" class="form-control" id="id" name="id" value="${param.id}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo *</label>
+                        <input type="text" class="form-control" id="tipo" name="tipo" value="${param.tipo}">
+                    </div>
+                    <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre *</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" value="${param.nombre}">
                     </div>

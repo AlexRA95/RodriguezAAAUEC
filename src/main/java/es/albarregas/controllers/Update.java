@@ -46,7 +46,6 @@ public class Update extends HttpServlet {
                 Profesor profesorSesion = (Profesor) sesion.getAttribute("profesor");
                 try{
                     BeanUtils.populate(profesor, parametros);
-                    profesor.setId(profesorSesion.getId());
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     throw new RuntimeException(e);
                 }
