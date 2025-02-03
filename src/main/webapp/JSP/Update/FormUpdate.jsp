@@ -39,14 +39,14 @@
                         <input type="text" class="form-control" id="ape2" name="ape2" value="${sessionScope.profesor.ape2}">
                     </div>
                     <div class="mb-3">
-                        <label for="escala" class="form-label">Escala</label>
+                        <label for="escala" class="form-label">Escala *</label>
                         <select class="form-select" id="escala" name="escala">
                             <option value="S" ${sessionScope.profesor.escala == 'S' ? 'selected' : ''}>S</option>
                             <option value="T" ${sessionScope.profesor.escala == 'E' ? 'selected' : ''}>T</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="fecha" class="form-label">Fecha</label>
+                        <label for="fecha" class="form-label">Fecha *</label>
                         <input type="date" class="form-control" id="fecha" name="fecha" value="${sessionScope.profesor.fecha}">
                     </div>
                     <button type="submit" class="btn btn-primary" name="opcion" value="doUpdate">Actualizar</button>

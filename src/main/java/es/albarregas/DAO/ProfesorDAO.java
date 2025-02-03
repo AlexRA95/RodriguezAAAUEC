@@ -1,5 +1,6 @@
 package es.albarregas.DAO;
 
+import es.albarregas.beans.Codigo;
 import es.albarregas.beans.Profesor;
 import es.albarregas.persistence.HibernateUtil;
 
@@ -70,7 +71,7 @@ public class ProfesorDAO implements IProfesorDAO {
     }
 
     @Override
-    public Profesor getOne(int pk) {
+    public Profesor getOne(Codigo pk) {
         Profesor profesor = new Profesor();
         Session sesion = null;
         try {

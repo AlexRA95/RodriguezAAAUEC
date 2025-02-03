@@ -22,13 +22,12 @@
             <form action="${applicationScope.contexto}/Delete" method="post" class="col-12 d-flex justify-content-center flex-column">
                 <div class="card">
                     <div class="card-header">
-                        Profesor ID: ${sessionScope.profesor.id}
+                        Profesor ID: ${sessionScope.profesor.codigo.id}, Tipo: ${sessionScope.profesor.codigo.tipo}
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${sessionScope.profesor.nombre} ${sessionScope.profesor.ape1} ${sessionScope.profesor.ape2}</h5>
-                        <p class="card-text">Nombre: ${sessionScope.profesor.nombre}</p>
-                        <p class="card-text">Apellido 1: ${sessionScope.profesor.ape1}</p>
-                        <p class="card-text">Apellido 2: ${sessionScope.profesor.ape2}</p>
+                        <p class="card-text">Escala: ${sessionScope.profesor.escala}</p>
+                        <p class="card-text">Fecha: ${sessionScope.profesor.fechaFormateada}</p>
                     </div>
                 </div>
                 <button type="submit" name="opcion" value="doDelete" class="btn btn-primary" >Borrar</button>

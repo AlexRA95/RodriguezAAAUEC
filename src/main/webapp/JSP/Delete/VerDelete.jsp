@@ -42,7 +42,7 @@
                                     <td>${profesor.nombre} ${profesor.ape1} ${profesor.ape2}</td>
                                     <td>${profesor.escala}</td>
                                     <td>${profesor.fechaFormateada}</td>
-                                    <td><input class="form-check-input" type="radio" name="profDelete" value="${profesor.id}" ${status.first ? 'checked' : ''}> </td>
+                                    <td><input class="form-check-input" type="radio" name="profDelete" value="${profesor.codigo.id}<*>${profesor.codigo.tipo}" ${status.first ? 'checked' : ''}> </td>
                                 </tr>
                             </c:forEach>
                         </c:otherwise>
